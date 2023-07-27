@@ -1,0 +1,52 @@
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0; /* Add a decent background color */
+    padding-top: 50px; 
+    min-height: 100vh; /* Set a minimum height to fill the entire viewport */
+  }
+  
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  .gallery-item {
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Add a transition for the image zoom effect */
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+  }
+  
+  .gallery-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #c5c5c5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a box shadow for a card effect */
+  }
+  
+  .gallery-item p {
+    margin-top: 5px;
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media (max-width: 768px) {
+    .gallery-grid {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+  
+    .gallery-item {
+      margin: 10px 0;
+    }
+  }
+  
