@@ -22,14 +22,15 @@
 //     fontSize: "48px",
 //     fontWeight: "bold",
 //     marginBottom: "20px",
-//     color: "#ffffff", // Set the text color to white to contrast with the background
+//     color: "#000000", // Set the text color to blue (#007bff) for CMR Institutions text
 //     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)", // Add a subtle text shadow
 //   };
 
 //   const mainLinksStyle = {
 //     display: "flex",
-//     flexDirection: "column",
+//     flexDirection: "row-reverse",
 //     alignItems: "flex-start", // Align the buttons to the left side
+    
 //   };
 
 //   const mainLinkStyle = {
@@ -40,15 +41,15 @@
 //     fontSize: "18px",
 //     fontWeight: "bold",
 //     textDecoration: "none",
-//     color: "#ffffff", // Set the text color to white
+//     color: "#ffffff", // Set the text color to blue (#007bff) for Gallery and Login buttons
 //     transition: "all 0.3s ease",
-//     background: "transparent", // Make the background transparent
+//     background: "#454545", // Make the background transparent
 //     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
 //   };
 
 //   const mainLinkHoverStyle = {
 //     backgroundColor: "#ffffff",
-//     color: "#007bff", // Set the text color to the primary color on hover
+//     color: "#007bff", // Set the text color to the primary color (#007bff) on hover
 //   };
 
 //   return (
@@ -77,6 +78,8 @@
 // };
 
 // export default Main;
+
+
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -107,9 +110,8 @@ const Main = () => {
 
   const mainLinksStyle = {
     display: "flex",
-    flexDirection: "row-reverse",
+    flexDirection: "column", // Align the buttons in a column
     alignItems: "flex-start", // Align the buttons to the left side
-    
   };
 
   const mainLinkStyle = {
@@ -120,7 +122,7 @@ const Main = () => {
     fontSize: "18px",
     fontWeight: "bold",
     textDecoration: "none",
-    color: "#ffffff", // Set the text color to blue (#007bff) for Gallery and Login buttons
+    color: "#ffffff", // Set the text color to white
     transition: "all 0.3s ease",
     background: "#454545", // Make the background transparent
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
@@ -146,10 +148,17 @@ const Main = () => {
         </Link>
         <Link
           to="/login"
+          className="btn btn-primary btn-lg mb-3"
+          style={mainLinkStyle}
+        >
+          Admin Login
+        </Link>
+        <Link
+          to="/studentlogin"
           className="btn btn-primary btn-lg"
           style={mainLinkStyle}
         >
-          Login
+          Student Login
         </Link>
       </div>
     </div>
@@ -157,6 +166,3 @@ const Main = () => {
 };
 
 export default Main;
-
-
-

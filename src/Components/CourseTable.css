@@ -1,0 +1,26 @@
+.course-table-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  /* Custom styling for the table header */
+  .table thead th {
+    text-align: center;
+  }
+  
+  /* Custom styling for the table rows */
+  .table tbody td {
+    text-align: center;
+  }
+  
+  /* Styling for the striped rows in the table */
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+  }
+  
