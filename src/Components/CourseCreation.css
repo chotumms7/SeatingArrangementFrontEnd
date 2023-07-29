@@ -10,11 +10,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #c7c5c5;
+    background-color: #c4c1c1;
   }
   
   .form-containercc {
-    background-color: #eae0e0;
+    background-color: #f1e0e0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
