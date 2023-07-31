@@ -1,76 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// function Dashboard() {
-//   return (
-//     <div className="container mt-5">
-//       <div className="row justify-content-center">
-//         <div className="col-md-6">
-//           <div
-//             className="card"
-//             style={{
-//               backgroundColor: "#f2f2f2",
-//               borderRadius: "10px",
-//               boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-//               padding: "20px",
-//             }}
-//           >
-//             <div style={{ marginBottom: "30px" }}>
-//               <h2
-//                 className="card-title text-center"
-//                 style={{ fontSize: "24px", fontWeight: "bold", color: "#333333" }}
-//               >
-//                 Dashboard
-//               </h2>
-//             </div>
-//             <div className="d-flex justify-content-center">
-//               <Link
-//                 to="/allot"
-//                 className="btn btn-primary btn-block"
-//                 style={{
-//                   backgroundColor: "#007bff",
-//                   color: "#ffffff",
-//                   border: "none",
-//                   padding: "12px 20px",
-//                   borderRadius: "5px",
-//                   cursor: "pointer",
-//                   width: "100%",
-//                   textAlign: "center",
-//                   fontSize: "18px",
-//                   transition: "background-color 0.3s",
-//                 }}
-//               >
-//                 Seat Allotment
-//               </Link>
-//             </div>
-//             <div className="d-flex justify-content-center mt-3">
-//               <Link
-//                 to="/coursecreation"
-//                 className="btn btn-primary btn-block"
-//                 style={{
-//                   backgroundColor: "#007bff",
-//                   color: "#ffffff",
-//                   border: "none",
-//                   padding: "12px 20px",
-//                   borderRadius: "5px",
-//                   cursor: "pointer",
-//                   width: "100%",
-//                   textAlign: "center",
-//                   fontSize: "18px",
-//                   transition: "background-color 0.3s",
-//                 }}
-//               >
-//                 Add Course
-//               </Link>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Dashboard;
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -96,9 +23,9 @@ function Dashboard() {
               Dashboard
             </h2>
           </div>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center mt-3">
             <Link
-              to="/allot"
+              to="/floor" // Set the path to the Blueprint page
               className="btn btn-primary btn-block dashboard-btn"
               style={{
                 backgroundColor: "#877F7D",
@@ -113,7 +40,7 @@ function Dashboard() {
                 transition: "background-color 0.3s",
               }}
             >
-              Seat Allotment
+              Blueprint
             </Link>
           </div>
           <div className="d-flex justify-content-center mt-3">
@@ -136,6 +63,46 @@ function Dashboard() {
               Add Course
             </Link>
           </div>
+          <div className="d-flex justify-content-center mt-3">
+            <Link
+              to="/deletecourse" // Set the path to the Delete Course page
+              className="btn btn-danger btn-block dashboard-btn"
+              style={{
+                backgroundColor: "#D9534F",
+                color: "#ffffff",
+                border: "none",
+                padding: "12px 20px",
+                borderRadius: "5px",
+                cursor: "pointer",
+                width: "100%",
+                textAlign: "center",
+                fontSize: "18px",
+                transition: "background-color 0.3s",
+              }}
+            >
+              Delete Course
+            </Link>
+          </div>
+          <div className="d-flex justify-content-center mt-3">
+            <Link
+              to="/allocatedlist" // Set the path to the Allocated List page
+              className="btn btn-primary btn-block dashboard-btn"
+              style={{
+                backgroundColor: "#877F7D",
+                color: "#ffffff",
+                border: "none",
+                padding: "12px 20px",
+                borderRadius: "5px",
+                cursor: "pointer",
+                width: "100%",
+                textAlign: "center",
+                fontSize: "18px",
+                transition: "background-color 0.3s",
+              }}
+            >
+              Allocated List
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -143,6 +110,7 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
 
 
 

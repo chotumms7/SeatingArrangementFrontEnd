@@ -2,19 +2,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./Login.css"; // Import the custom CSS file for login page styling
+import "./Login.css"; 
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [hover, setHover] = useState(false);
+  const [hover,setHover] = useState(false);
   const navigate = useNavigate();
 
   async function login(event) {
     event.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/userdetails/login/${username}/${password}`
+        `http://localhost:8080/userdetails/login/${username}/${password}`
       );
       if (response.data) {
         navigate("/dashboard"); // Redirect to Dashboard after successful login
@@ -31,7 +31,7 @@ function Login() {
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <div className="card card-custom">
+            <div className="card login-card">
               <div className="card-body">
                 <h2 className="card-title text-center">SEAT ALLOTMENT SYSTEM</h2>
                 <form>
@@ -60,7 +60,7 @@ function Login() {
                   <div className="d-flex justify-content-center">
                     <button
                       type="submit"
-                      className="btn btn-primary btn-block"
+                      className="btn btn-primary btn-block login-btn"
                       onClick={login}
                       onMouseEnter={() => setHover(true)}
                       onMouseLeave={() => setHover(false)}

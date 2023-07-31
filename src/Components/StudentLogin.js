@@ -1,109 +1,120 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "./StudentLogin.css"; 
 
 const StudentLogin = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [registerUsername, setRegisterUsername] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [loginErrorMessage, setLoginErrorMessage] = useState("");
+  const [registerSuccessMessage, setRegisterSuccessMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
+  const handleLoginSubmit = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:8080/student/login/${username}/${password}`
+        `http://localhost:8080/student/login/${loginUsername}/${loginPassword}`
       );
 
-      // If login is successful, redirect the student to the appropriate page
       if (response.data) {
         navigate("/coursetable");
         console.log("Login successful!");
       } else {
-        // If the backend returns an error, display an error message
-        setErrorMessage("Incorrect username or password");
+        setLoginErrorMessage("Incorrect username or password");
       }
     } catch (error) {
-      // If there's an error with the API call, display an error message
       console.error("Error logging in:", error);
-      setErrorMessage("An error occurred. Please try again later.");
+      setLoginErrorMessage("An error occurred. Please try again later.");
+    }
+  };
+
+  const handleRegisterSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("http://localhost:8080/student/add", {
+        username: registerUsername,
+        password: registerPassword,
+      });
+
+      setRegisterSuccessMessage("Registered successfully!");
+      setRegisterUsername("");
+      setRegisterPassword("");
+    } catch (error) {
+      console.error("Error registering student:", error);
+      setRegisterSuccessMessage("An error occurred. Please try again later.");
     }
   };
 
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div
-            className="card card-custom"
-            style={{
-              backgroundColor: "#f2f2f2",
-              borderRadius: "10px",
-              boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-              padding: "20px",
-            }}
-          >
-            <div style={{ marginBottom: "30px" }}>
-              <h2
-                className="card-title text-center"
-                style={{ fontSize: "24px", fontWeight: "bold", color: "#333333" }}
-              >
-                Student Login
-              </h2>
+    <div className="student-login-page">
+      <div className="login-container">
+        <div className="login-card">
+          {/* Login form */}
+          <div className="login-title">Student Login</div>
+          <form onSubmit={handleLoginSubmit}>
+            <div className="form-group">
+              <label>Username</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter Username"
+                value={loginUsername}
+                onChange={(event) => setLoginUsername(event.target.value)}
+              />
             </div>
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label>Username</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter Username"
-                  value={username}
-                  onChange={(event) => setUsername(event.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <label>Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Enter Password"
-                  value={password}
-                  onChange={(event) => setPassword(event.target.value)}
-                />
-              </div>
-              {errorMessage && (
-                <div className="alert alert-danger" role="alert">
-                  {errorMessage}
-                </div>
-              )}
-              <div className="d-flex justify-content-center">
-                <button
-                  type="submit"
-                  className="btn btn-primary btn-block"
-                  style={{
-                    backgroundColor: "#007bff",
-                    color: "#ffffff",
-                    border: "none",
-                    padding: "12px 20px",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                    width: "100%",
-                    textAlign: "center",
-                    fontSize: "18px",
-                    transition: "background-color 0.3s",
-                  }}
-                >
-                  Login
-                </button>
-              </div>
-            </form>
-            <div className="text-center mt-3">
-              <Link to="/">Back to Main</Link>
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Enter Password"
+                value={loginPassword}
+                onChange={(event) => setLoginPassword(event.target.value)}
+              />
             </div>
-          </div>
+            {loginErrorMessage && <div className="error-message">{loginErrorMessage}</div>}
+            <div className="d-flex justify-content-center">
+              <button type="submit" className="login-button">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div className="register-card">
+          {/* Register form */}
+          <div className="register-title">Student Registration</div>
+          <form onSubmit={handleRegisterSubmit}>
+            <div className="form-group">
+              <label>Username</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter Username"
+                value={registerUsername}
+                onChange={(event) => setRegisterUsername(event.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Enter Password"
+                value={registerPassword}
+                onChange={(event) => setRegisterPassword(event.target.value)}
+              />
+            </div>
+            {registerSuccessMessage && <div className="success-message">{registerSuccessMessage}</div>}
+            <div className="d-flex justify-content-center">
+              <button type="submit" className="register-button">
+                Register
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -111,3 +122,4 @@ const StudentLogin = () => {
 };
 
 export default StudentLogin;
+

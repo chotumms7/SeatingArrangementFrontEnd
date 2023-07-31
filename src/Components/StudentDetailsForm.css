@@ -1,0 +1,54 @@
+
+
+.student-details-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e9e6e6; /* Set the background color for the entire page */
+  }
+  
+  .student-details-form {
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #d0cfcf; /* Set the background color for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-details-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .student-details-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+  }
+  
+  .student-details-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #b7b4b4;
+    border-radius: 4px;
+  }
+  
+  .student-details-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6b6d70;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .student-details-form button:hover {
+    background-color: #0056b3;
+  }
+  

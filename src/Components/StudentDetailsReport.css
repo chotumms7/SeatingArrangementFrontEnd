@@ -1,0 +1,59 @@
+
+
+.student-details-report-container {
+    background-color: #b2b1b1;
+    padding: 20px;
+    text-align: center; /* Center the content horizontally */
+  }
+  
+  .student-details-report-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .student-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #dfdddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .student-details-table th,
+  .student-details-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .student-details-table th {
+    background-color: #d7d0d0;
+  }
+  
+  .student-details-table tr:last-child td {
+    border-bottom: none; /* Remove bottom border for the last row */
+  }
+  
+  
+  
+.logout-button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .logout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #0056b3;
+  }
