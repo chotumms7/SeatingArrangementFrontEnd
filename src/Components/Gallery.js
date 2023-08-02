@@ -7,7 +7,7 @@ import Campus from "./Images/Campus.jpg";
 import Lab from "./Images/Lab.jpg";
 import Playarea from "./Images/Playarea.jpg";
 
-import "./Gallery.css"; // Import the custom CSS file for gallery styling
+import "./Gallery.css"; 
 
 const Gallery = () => {
   return (

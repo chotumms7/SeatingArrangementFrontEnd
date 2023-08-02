@@ -22,7 +22,7 @@ const CourseCreation = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // Process form data here and send it to the backend
+
     axios
       .post("http://localhost:8080/courses/add", formData, {
         headers: {
@@ -31,7 +31,7 @@ const CourseCreation = () => {
       })
       .then((response) => {
         console.log("Course added successfully:", response.data);
-        // Clear the form fields after successful submission
+       
         setFormData({
           course: "",
           total_seats: "",
@@ -40,13 +40,13 @@ const CourseCreation = () => {
           max_marks: "",
           min_marks: "",
         });
-        // Show success message
+       
         setSuccessMessage("Course added successfully!");
         setErrorMessage("");
       })
       .catch((error) => {
         console.error("Error adding course:", error);
-        // Show error message
+        
         setErrorMessage("Failed to add course. Please try again.");
         setSuccessMessage("");
       });

@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import floor1 from "./Floor1";
-import floor2 from "./Floor2";
-import "./Floor.css"; // Import the updated CSS file
+
+import "./Floor.css"; 
 
 const Floor = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    // Fetch course details for the table from the backend
+   
     fetchCourseDetails();
   }, []);
 
@@ -25,7 +24,7 @@ const Floor = () => {
   return (
     <div className="floor-container">
       <h2>Floor</h2>
-      <table className="table table-bordered mt-3 floor-table">
+      <table className="table table-bordered mt-3 floor-table-courses">
         <thead>
           <tr>
             <th>ID</th>
@@ -61,7 +60,7 @@ const Floor = () => {
             }}
           >
             <h3 className="floor-text">Floor 1</h3>
-            {/* Add content for Floor 1 */}
+          
           </Link>
         </div>
         <div className="col-md-6">
@@ -77,7 +76,7 @@ const Floor = () => {
             }}
           >
             <h3 className="floor-text">Floor 2</h3>
-            {/* Add content for Floor 2 */}
+           
           </Link>
         </div>
       </div>

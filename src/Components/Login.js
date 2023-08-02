@@ -17,7 +17,7 @@ function Login() {
         `http://localhost:8080/userdetails/login/${username}/${password}`
       );
       if (response.data) {
-        navigate("/dashboard"); // Redirect to Dashboard after successful login
+        navigate("/dashboard"); 
       } else {
         alert("Incorrect Username and Password not match");
       }
@@ -33,7 +33,7 @@ function Login() {
           <div className="col-md-6">
             <div className="card login-card">
               <div className="card-body">
-                <h2 className="card-title text-center">SEAT ALLOTMENT SYSTEM</h2>
+                <h2 className="card-title text-center">ADMIN LOGIN</h2>
                 <form>
                   <div className="form-group">
                     <label>Username</label>

@@ -3,7 +3,7 @@
 .student-details-report-container {
     background-color: #b2b1b1;
     padding: 20px;
-    text-align: center; /* Center the content horizontally */
+    text-align: center;
   }
   
   .student-details-report-heading {
@@ -33,10 +33,13 @@
   }
   
   .student-details-table tr:last-child td {
-    border-bottom: none; /* Remove bottom border for the last row */
+    border-bottom: none; 
   }
-  
-  
+
+  .student-details-report-table-scroll {
+    max-height: 400px; 
+    overflow-y: auto; 
+  }
   
 .logout-button-container {
     display: flex;

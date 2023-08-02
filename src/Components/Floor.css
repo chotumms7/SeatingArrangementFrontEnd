@@ -5,8 +5,8 @@
     padding: 20px;
   }
   
-  .floor-table {
-    background-color: #c0b4b4; /* Background color for the table */
+  .floor-table-courses {
+    background-color: #bfbdbd; /* Background color for the table */
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 20px;

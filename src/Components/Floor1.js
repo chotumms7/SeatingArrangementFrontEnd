@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./Floor1.css"; // Import the CSS file for styling
+import "./Floor1.css"; 
 
 const Floor1 = () => {
   const [courses, setCourses] = useState([]);
@@ -34,7 +34,7 @@ const Floor1 = () => {
 
   const handleAllocateButtonClick = () => {
     if (selectedCourse.no_of_seats_available > 0) {
-      // Implement the logic to allocate the course here
+     
       console.log("Allocate button clicked for course:", selectedCourse.course);
       
       navigate("/studentdetailsform", {
@@ -84,7 +84,7 @@ const Floor1 = () => {
           <button
             className="allocate-button"
             onClick={handleAllocateButtonClick}
-            disabled={selectedCourse.no_of_seats_available === 0} // Disable button if seats available is 0
+            disabled={selectedCourse.no_of_seats_available === 0} 
           >
             Allocate
           </button>

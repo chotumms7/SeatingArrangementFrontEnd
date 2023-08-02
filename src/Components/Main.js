@@ -1,18 +1,18 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css"; 
 import homepage22 from "./Images/homepage22.jpg";
 
 const Main = () => {
   const mainContainerStyle = {
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start", // Align the content to the left side
+    alignItems: "flex-start", 
     justifyContent: "center",
     minHeight: "100vh",
-    background: `url(${homepage22})`, // Set the background image
-    backgroundSize: "100% 100%", // Stretch the image to cover the container
+    background: `url(${homepage22})`, 
+    backgroundSize: "100% 100%",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     padding: "20px",
@@ -22,39 +22,34 @@ const Main = () => {
     fontSize: "48px",
     fontWeight: "bold",
     marginBottom: "20px",
-    color: "#000000", // Set the text color to blue (#007bff) for CMR Institutions text
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)", // Add a subtle text shadow
+    color: "#000000", 
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.4)", 
   };
 
   const mainLinksStyle = {
     display: "flex",
-    flexDirection: "column", // Align the buttons in a column
-    alignItems: "flex-start", // Align the buttons to the left side
+    flexDirection: "column", 
+    alignItems: "flex-start", 
   };
 
   const mainLinkStyle = {
     padding: "12px 24px",
     margin: "10px",
-    border: "2px solid #ffffff", // Set the border color to white
+    border: "2px solid #ffffff", 
     borderRadius: "5px",
     fontSize: "18px",
     fontWeight: "bold",
     textDecoration: "none",
-    color: "#ffffff", // Set the text color to white
+    color: "#ffffff", 
     transition: "all 0.3s ease",
-    background: "#454545", // Make the background transparent
+    background: "#454545", 
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-  };
-
-  const mainLinkHoverStyle = {
-    backgroundColor: "#ffffff",
-    color: "#007bff", // Set the text color to the primary color (#007bff) on hover
   };
 
   return (
     <div className="container-fluid" style={mainContainerStyle}>
       <h1 className="display-4" style={mainTitleStyle}>
-        CMR Institutions
+        Seating Arrangement System
       </h1>
       <div style={mainLinksStyle}>
         <Link

@@ -1,54 +1,59 @@
+/* Add the following styles at the end of your existing studentdetailsform.css */
 
-
+/* Container for the form with margin-top */
 .student-details-form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #e9e6e6; /* Set the background color for the entire page */
-  }
-  
-  .student-details-form {
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #d0cfcf; /* Set the background color for the form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .student-details-form h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #333333;
-  }
-  
-  .student-details-form label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333333;
-  }
-  
-  .student-details-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #b7b4b4;
-    border-radius: 4px;
-  }
-  
-  .student-details-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #6b6d70;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .student-details-form button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e9e6e6;
+  margin-top: 20px; /* Add the top margin to create spacing */
+}
+
+/* Styles for the form itself */
+.student-details-form {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #d0cfcf;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto; /* Add the scroll option for the form */
+}
+
+.student-details-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #333333;
+}
+
+.student-details-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333333;
+}
+
+.student-details-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #b7b4b4;
+  border-radius: 4px;
+}
+
+.student-details-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6b6d70;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.student-details-form button:hover {
+  background-color: #0056b3;
+}

@@ -25,7 +25,7 @@ function Dashboard() {
           </div>
           <div className="d-flex justify-content-center mt-3">
             <Link
-              to="/floor" // Set the path to the Blueprint page
+              to="/floor" 
               className="btn btn-primary btn-block dashboard-btn"
               style={{
                 backgroundColor: "#877F7D",
@@ -65,7 +65,7 @@ function Dashboard() {
           </div>
           <div className="d-flex justify-content-center mt-3">
             <Link
-              to="/deletecourse" // Set the path to the Delete Course page
+              to="/deletecourse" 
               className="btn btn-danger btn-block dashboard-btn"
               style={{
                 backgroundColor: "#D9534F",
@@ -85,7 +85,7 @@ function Dashboard() {
           </div>
           <div className="d-flex justify-content-center mt-3">
             <Link
-              to="/allocatedlist" // Set the path to the Allocated List page
+              to="/allocatedlist" 
               className="btn btn-primary btn-block dashboard-btn"
               style={{
                 backgroundColor: "#877F7D",

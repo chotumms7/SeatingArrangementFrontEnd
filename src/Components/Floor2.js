@@ -35,7 +35,7 @@ const Floor2 = () => {
   };
 
   const handleAllocateButtonClick = () => {
-    // Implement the logic to allocate the course here
+    
     console.log("Allocate button clicked for course:", selectedCourse.course);
     
     navigate("/studentdetailsform", {
@@ -86,7 +86,7 @@ const Floor2 = () => {
             <button
               className="allocate-button"
               onClick={handleAllocateButtonClick}
-              disabled={selectedCourse?.no_of_seats_available === 0} // Disable button if seats available is 0
+              disabled={selectedCourse?.no_of_seats_available === 0} 
             >
               Allocate
             </button>
